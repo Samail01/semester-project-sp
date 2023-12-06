@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/output.css" />
-    <link href="./dist/output.css" rel="stylesheet" />
-    <script src="./src/script.js" defer type="module"></script>
+    <script src="./src/auth/login.js" defer></script>
+    <script src="./src/script.js" type="module" defer></script>
     <script src="./src/components/navbar.js" defer></script>
-    <title>Home</title>
+    <title>Login</title>
   </head>
   <body>
     <nav
@@ -40,9 +40,7 @@
         class="md:flex md:items-center md:z-auto md:static absolute w-full bg-red-400 left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 -top-96 transition-all ease-in duration-500"
       >
         <li class="mx-7 my-6 md:my-0">
-          <a href="./index.html" class="text-xl hover:text-red-700 duration-500"
-            >Home</a
-          >
+          <a href="#" class="text-xl hover:text-red-700 duration-500">Home</a>
         </li>
         <li class="mx-7 my-6 md:my-0">
           <a href="#" class="text-xl hover:text-red-700 duration-500"
@@ -55,46 +53,61 @@
           >
         </li>
         <li class="mx-2 my-6 md:my-0">
-          <a
-            href="./src/pages/login.html"
-            class="text-xl hover:text-red-700 duration-500"
+          <a href="#" class="text-xl hover:text-red-700 duration-500"
             >Sign in</a
           >
         </li>
         <li class="mx-2 my-6 md:my-0">
-          <a
-            href="./src/pages/register.html"
-            class="text-xl hover:text-red-700 duration-500"
+          <a href="#" class="text-xl hover:text-red-700 duration-500"
             >Sign up</a
           >
         </li>
       </ul>
     </nav>
 
-    <!-- Hero section -->
-    <div class="relative text-white">
-      <img
-        class="w-full h-64 object-cover md:h-96"
-        src="./media/background-img.jpg"
-        alt="Auction Items"
-      />
+    <!-- Login Form -->
 
-      <div
-        class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4"
-      >
-        <div class="text-center">
-          <h2 class="text-xl sm:text-3xl md:text-4xl font-bold">
-            Sign up and start with 1,000 free credits! Bid, sell, and treasure
-            hunt
-          </h2>
-          <a
-            href="#register"
-            class="mt-8 inline-block bg-white text-red-600 font-medium py-2 px-4 rounded-lg text-sm sm:text-base md:text-lg hover:bg-gray-100 transition-colors duration-200"
-          >
-            Sign up!
-          </a>
-        </div>
+    <form
+      id="login-form"
+      class="max-w-md mx-auto mt-8 p-6 border border-gray-300 rounded-md shadow-lg bg-white"
+    >
+      <h2 class="text-2xl text-center mb-6">Login</h2>
+      <div class="mb-4">
+        <label for="login-email" class="block text-sm font-medium text-gray-700"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          pattern=".+@stud\.noroff\.no"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          placeholder="Enter your email"
+        />
       </div>
-    </div>
+      <div class="mb-6">
+        <label for="password" class="block text-sm font-medium text-gray-700"
+          >Password</label
+        >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="8"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          placeholder="Enter your password"
+        />
+      </div>
+      <div class="flex justify-end">
+        <button
+          type="submit"
+          class="px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Login
+        </button>
+      </div>
+    </form>
   </body>
 </html>
