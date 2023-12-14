@@ -7,6 +7,11 @@ module.exports = {
     './login.html'
   ],
 
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ]
+
 
   }
   // ...
